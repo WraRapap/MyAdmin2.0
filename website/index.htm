@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>P H C 國際慈善舞團</title>
+<link rel="icon" href="view/images/index/dance.png">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- 3.3.4 -->
+<!-- link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"> <!-- 3.3.4 -->
+
+<link rel="stylesheet" href="ngdialog/css/ngDialog.css">
+<link rel="stylesheet" href="ngdialog/css/ngDialog-theme-default.css">
+<link rel="stylesheet" href="ngdialog/css/ngDialog-theme-plain.css">
+<link rel="stylesheet" href="ngdialog/css/ngDialog-custom-width.css">
+<link rel="stylesheet" href="view/css/theme.css">
+<link rel="stylesheet" href="view/css/index-theme.css">
+<link rel="stylesheet" href="view/css/about-theme.css">
+<link rel="stylesheet" href="view/css/activity-theme.css">
+<link rel="stylesheet" href="view/css/lesson-theme.css">
+<link rel="stylesheet" href="view/css/teacher-theme.css">
+<link rel="stylesheet" href="view/css/join-theme.css">
+<link rel="stylesheet" href="view/css/join-lesson-theme.css">
+<link rel="stylesheet" href="view/css/contact-theme.css">
+<link rel="stylesheet" href="directive/css/pagination.css">
+
+<!--
+<link rel="stylesheet" href="view/css/main-theme.css">
+<link rel="stylesheet" href="view/css/service-theme.css">
+<link rel="stylesheet" href="view/css/map-theme.css">
+<link rel="stylesheet" href="view/css/contact-theme.css">
+-->
+
+<!--<script src="angularjs/angularjs1.4.0.js"></script>-->
+<script src="angularjs/angular-sanitize.js"></script>
+<script src="angular-ui-router/angular-ui-router.js"></script><!-- v0.2.18 -->
+<script src="angularjs/angular-animate.min.js"></script>
+<script src="ngFileUpload/ng-file-upload.min.js"></script>
+<script src="ngFileUpload/ng-file-upload-shim.min.js"></script>
+<script src="tweenMax/TweenMax.min.js"></script>
+<script src="jquery/jquery.min.js"></script><!--1.11.1 -->
+
+<script type="text/javascript" src="jquery/jquery3.2.1.min.js"></script>
+<link type="text/css" rel="stylesheet" href="view/css/jquery.mmenu.css" />
+<script type="text/javascript" src="jquery/jquery.mmenu.js"></script>
+<script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu();
+			});
+</script>
+<script src="mainApp.js"></script>
+<script src="ngdialog/js/ngDialog.js"></script>
+<script src="directive/pagination/tm.pagination.js"></script>
+
+<!--- Data -->
+<script src="data/member.js"></script>
+<!-- 		-->
+
+<!--- Defines -->
+<script src="define/CommonDefine.js"></script>
+<script src="define/CommonString.js"></script>
+<script src="define/ResultMsg.js"></script>
+<script src="define/EventTriggerDefine.js"></script>
+<!-- 		-->
+
+
+<!--- Services -->
+<script src="services/LanguageService.js"></script>
+<script src="services/DialogService.js"></script>
+<script src="services/HttpService.js"></script>
+<!-- 			-->
+
+</head>
+
+<body>
+
+<div class="mobile_Header_Container" ng-controller="HeaderController">
+  <div class="container_Small">
+    <div class="container_Full">
+      <div class="mobile_Header txt_Small">
+        <div class="mobile_Header_Menu"><a href="#menu" class="mobile_Header_Ham"><span></span></a></div>
+        <div class="mobile_Header_Logo"><a href="#/index"><img src="view/images/index/mobile_dance.png"></a></div>
+        <div class="mobile_header_languageBar">
+          <div class = "header_TranditionCh"> <a href="" ng-click="LanguageChange(0)"><span class="header_text" ng-class="TwFont">繁<span>體中文</span></span></a> </div>
+          <div class = "header_Line">|</div>
+          <div class = "header_SimpleCh"> <a href="" ng-click="LanguageChange(2)"><span class="header_text" ng-class="ChFont">简<span>体中文</span></span></a> </div>
+        </div>
+      </div>
+      <nav id="menu" class="txt_Std" >
+        <ul>
+          <li><a ng-click="ClickAbout()"> 舞團介紹 </a></li>
+          <li><a> 課程介紹 </a>
+            <ul>
+              <li>
+                <!-- a href="#/lesson/1" ng-href="#/lesson/1">課程介紹</a-->
+                <a ng-click="ClickLesson(1)">課程介紹</a>
+              </li>
+              <li><a ng-click="ClickLesson(2)">舞團課表</a></li>
+            </ul>
+          </li>
+          <li><a ng-click="ClickTeacher()"> 師資介紹 </a></li>
+
+          <li><a ng-click="ClickActivity()"> 活動相本 </a></li>
+
+          <li><a> 預約報名 </a>
+            <ul>
+              <li><a ng-click="ClickJoinLesson()" >課程報名</a></li>
+            </ul>
+          </li>
+          <li><a ng-click="ClickContact()"> 聯絡我們 </a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+<div id = "id_wrapper page">
+
+  <layout name="header"/>
+  <layout name="content"/>
+  <layout name="footer"/>
+</div>
+</body>
+</html>

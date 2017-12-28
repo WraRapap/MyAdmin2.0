@@ -1,0 +1,32 @@
+.about_mainBg{
+	height:120px;
+	background-color: #ebebeb;        
+}
+.about_mainPic {
+        display: table;
+        width: 100%;
+        height: 280px;
+        background: url(../images/about/PHC-about_banner.jpg) center no-repeat;
+        text-align: center;
+}
+.about_mainPic > div{
+        display: table-cell;
+        vertical-align: middle;
+}
+.about_mainPic  .hrStyle{
+        margin: 34px auto;
+}
+.about_content {
+	width: 80%;
+        margin: 0 auto;
+        text-align: center;
+}
+
+.about_content > p {
+    margin: 40px 0 0;
+}
+@media screen and (max-width:768px){
+.about_mainBg{
+display: none;
+}
+}

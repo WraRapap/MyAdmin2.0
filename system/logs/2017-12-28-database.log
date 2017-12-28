@@ -1,0 +1,2 @@
+[2017-12-28 10:41:34 - ::1] SELECT id, title FROM cs_cs_course  ;
+[2017-12-28 10:41:35 - ::1] SELECT id, title FROM cs_cs_course  ;

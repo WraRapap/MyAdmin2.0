@@ -1,0 +1,58 @@
+<div class = "teacher_container" ng-class="containerSelectCSS" ng-controller="TeacherController">
+  <div class="teacher_mainBg"></div>
+  <div class="teacher_mainPic">
+    <div>
+      <hr class="hrStyle">
+      <p class="title_XLarge">{{albumTitle}}</p>
+      <hr class="hrStyle">
+    </div>
+  </div>
+  <div class="teacher_content">
+    <div class="teacher_content_wrap">
+      <div class="container_Full">
+        <div class="teacher_LeftMenuBar">
+          <div class="teacherIntro" ng-repeat="data in TeacherDatas">
+            <p class = "teacher_linkText" ng-click="clickTeacher($index)" ng-mouseover="teacherIntroMouseEvent(1)" 
+			ng-mouseleave="teacherIntroMouseEvent(2)"
+			ng-click="teacherIntroMouseEvent(3)"
+			ng-class="teacherIntro">
+            {{data.name}}
+            </p>
+          </div>
+        </div>
+        <div class="teacher_RightMenuBar">
+          <div class="container_Full">
+            <div class="teacher_data_wrapper area1">
+              <div class="teacher_data_pic"> <img ng-src="view/images/teacher/{{selectIndex}}.jpg"> </div>
+              <div class="teacher_data_info" ng-repeat="data in TeacherPro">
+                <p class="title_Large">{{teacherName}} </p>
+                <p class="txt_Large">{{data.title}} | </p>
+                <p class="txt_Mid" ng-bind-html="data.content"></p>
+              </div>
+            </div>
+            <div class="teacher_data_wrapper area2">
+              <div>
+                <div ng-repeat="data in TeacherData">
+                  <p class="txt_Large">{{data.title}} |</p>
+                  <p class="txt_Mid" ng-bind-html="data.content"></p>
+                </div>
+              </div>
+              <div>
+                <div ng-repeat="data in TeacherData1">
+                  <p class="txt_Large">{{data.title}} |</p>
+                  <p class="txt_Mid" ng-bind-html="data.content"></p>
+                </div>
+              </div>
+            </div>
+            <div class="teacher_data_wrapper area3">
+              <div>
+                <p class="txt_Large">照片|</p>
+                <p ng-class="teacherPicCSS"> <a ng-repeat="data in TeacherPics" ><img ng-src="view/images/teacher/{{selectIndex}}/{{data}}.jpg"></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<!--<div class="mobile_Header_Container">
+  <div class="container_Small">
+    <div id="page" class="container_Full">
+      <div class="mobile_Header txt_Small">
+        <div class="mobile_Header_Menu"><a href="#menu" class="mobile_Header_Ham"><span></span></a></div>
+        <div class="mobile_Header_Logo"><a href="#/index"><img src="view/images/index/mobile_dance.png"></a></div>
+        <div class="mobile_header_languageBar">
+          <div class = "header_TranditionCh"> <a href="" ng-click="LanguageChange(0)"><span class="header_text" ng-class="TwFont">繁<span>體中文</span></span></a> </div>
+          <div class = "header_Line">|</div>
+          <div class = "header_SimpleCh"> <a href="" ng-click="LanguageChange(2)"><span class="header_text" ng-class="ChFont">简<span>体中文</span></span></a> </div>
+        </div>
+      </div>
+      <nav id="menu" class="txt_Std">
+        <ul>
+          <li><a href="http://puhuei-dance.com/#/about" ng-click=""> 舞團介紹 </a></li>
+          <li ng-mouseleave="lessonListLeave()"><a href="" ng-click="lessonListEnter()" ng-mouseenter="lessonListEnter()"> 課程介紹 </a>
+            <ul ng-class="lessonMenuShow">
+              <li><a href="http://puhuei-dance.com/#/lesson/1" ng-href="http://puhuei-dance.com/#/lesson/1">課程介紹</a></li>
+              <li><a href="http://puhuei-dance.com/#/lesson/2" ng-href="http://puhuei-dance.com/#/lesson/2"">舞團課表</a></li>
+            </ul>
+          </li>
+          <li><a href="http://puhuei-dance.com/#/teacher/origin" ng-click=""> 師資介紹 </a></li>
+          <li ng-mouseleave="activityListLeave()"><a href="" ng-click="activityListEnter()" ng-mouseenter="activityListEnter()"> 活動相本 </a>
+            <ul ng-class="activityMenuShow">
+              <li><a href="http://puhuei-dance.com/#/activity/1">舞團相本</a></li>
+              <li><a href="http://puhuei-dance.com/#/activity/2">活動相本</a></li>
+            </ul>
+          </li>
+          <li ng-mouseleave="joinListLeave()"><a href="" ng-click="joinListEnter()" ng-mouseenter="joinListEnter()"> 預約報名 </a>
+            <ul  ng-class="joinMenuShow">
+              <li><a ng-click="ClickJoin()">課程報名</a></li>
+              <li><a href="http://puhuei-dance.com/#/join">甄選報名</a></li>
+            </ul>
+          </li>
+          <li><a href="" ng-click="ClickContact()"> 聯絡我們 </a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>-->
+<div ng-controller="HeaderController">
+  <div class="header_container"  >
+    <div class="container_Mid">
+      <div class="container_Full clearfix ">
+        <div class = "header_info">
+          <div><img ng-src="view/images/index/phoneIcon.png" class="header_Icon"> <span class="header_content"> + 886 423890466 </span> </div>
+          <div><img ng-src="view/images/index/urlIcon.png" class="header_Icon"> <span class="header_content"> 河南路四段718號 </span> </div>
+          <div><img ng-src="view/images/index/emailIcon.png" class="header_Icon"><span class="header_content"> Phc.dancestudio@gmail.com </span></div>
+          <div><a href="https://www.facebook.com/PHCDanceStudio/" target="_blank"><img ng-src="view/images/index/fb.png" class="header_Icon"></a></div>
+        </div>
+        <div class = "header_languageBar">
+          <div class = "header_TranditionCh"> <a href="" ng-click="LanguageChange(0)"><span class="header_text" ng-class="TwFont">繁<span>體中文</span></span></a> </div>
+          <div class = "header_Line">|</div>
+          <div class = "header_SimpleCh"> <a href="" ng-click="LanguageChange(2)"><span class="header_text" ng-class="ChFont">简<span>体中文</span></span></a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav_container">
+    <div class="container_Small">
+      <div class="container_Full">
+        <div class = "header_nav_wrap txt_Std">
+          <nav class="header_nav">
+            <ul class="nav_Clearfix">
+              <li><a href="about.htm" ng-click=""> 舞團介紹 </a></li>
+              <li ng-mouseleave="lessonListLeave()"><a href="" ng-click="lessonListEnter()" ng-mouseenter="lessonListEnter()"> 課程介紹 </a>
+                <ul class="header_nav_sub_menu" ng-class="lessonMenuShow">
+                  <li><a href="lesson.htm?typeID=1">課程介紹</a></li>
+                  <li><a href="lesson.htm?typeID=2">舞團課表</a></li>
+                </ul>
+              </li>
+              <li><a href="teacher.htm?origin" ng-click=""> 師資介紹 </a></li>
+              <li><a href="index" class="nav_Logo"><img ng-src="view/images/index/dance.png"></a></li>
+              <li><a href="activity.htm" ng-click=""> 活動相本 </a></li>
+              <li ng-mouseleave="joinListLeave()"><a href="" ng-click="joinListEnter()" ng-mouseenter="joinListEnter()"> 預約報名 </a>
+                <ul class="header_nav_sub_menu" ng-class="joinMenuShow">
+                  <li><a  ng-click="ClickJoinLesson()">課程報名</a></li>
+                </ul>
+              </li>
+              <li><a href  ng-click="ClickContact()"> 聯絡我們 </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

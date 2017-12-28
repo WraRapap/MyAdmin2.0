@@ -1,0 +1,51 @@
+.contact_container {
+	width: 100%;
+}
+.contact_mainBg {
+	width: 100%;
+	height: 120px;
+	background-color: #ebebeb;
+}
+.contact_mainPic {
+	width: 100%;
+	height: 280px;
+	display: table;
+	text-align: center;
+	background: url(../images/about/PHC-about_banner.jpg) center no-repeat;
+}
+.contact_mainPic > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.contact_mainPic .hrStyle {
+	margin: 34px auto;
+}
+.contact_content {
+	padding: 50px 0;
+}
+.contact_content ul{
+	list-style: none;
+	word-break: break-all;
+}
+.contact_content li {
+	padding: 0 0 10px;
+}
+.contact_content li > span{
+	padding: 0 15px 0 0;
+	font-weight: 700;
+}
+.contact_content  iframe{
+	width: 100%;
+	height: 300px;
+	border: none;
+	padding: 20px 0 0;
+}
+.contact_content_wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+ @media screen and (max-width: 768px) {
+.contact_mainBg {
+display:none;
+}
+}

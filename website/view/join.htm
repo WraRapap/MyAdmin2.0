@@ -1,0 +1,111 @@
+<div class = "join_container">
+  <div class="join_mainBg"></div>
+  <div class="join_mainPic">
+    <div>
+      <hr class="hrStyle">
+      <p class="title_XLarge">{{albumTitle}}</p>
+      <hr class="hrStyle">
+    </div>
+  </div>
+  <div class="join_content txt_Std">
+    <div class="join_content_wrap">
+      <div class="container_Full">
+        <div class="join_content_up">
+          <p>PHC國際慈善舞團提供國內舞者工作機會，長期配合公益演出、商業演出，並會將舞團及演出收入全數捐贈給各大社福機關團體，為社會盡最大一份心力。歡迎國內年輕男女舞者及應屆畢業生加入我們，與舞團一起成長、一起前進！</p>
+          <p>
+          <ul>
+            <li>報名資格：舞蹈專科或大學畢業，35歲(含)以下，男女不拘</li>
+            <li>報名方式：傳送個人報名表至～phc.dancestudio@gmail.com</li>
+            <li>報名日期：即日起至 10 月 10 日(二)止</li>
+            <li>徵選日期：2017 年 10 月 14 日(六) 下午 1:30 報到</li>
+            <li>徵選時間：下午 2 點至 6 點</li>
+            <li class="addSpace">徵選地點：台中市南屯區河南路四段718號</li>
+            <li class="addSpace">徵選內容：
+              <ol>
+                <li>芭蕾、現代、中國舞及商業舞蹈動作組合</li>
+                <li>兩分鐘自選舞</li>
+                <li>面試</li>
+              </ol>
+            </li>
+            <li class="addSpace">錄取公告：個別通知，於11月開始實習</li>
+            <li class="addSpace">薪資福利：三個月實習團員月薪兩萬，正式團員月薪三萬，演出費另計並享公司勞健保、有機會公費參加證照研習、出國演出等多項福利，外縣市舞者提供證明可享每月住宿津貼＄5,000元。</li>
+            <li class="addSpace">注意事項：徵選當天請舞者們穿著全黑並可展示身材曲線、方便活動之服裝，並請自行準備舞鞋及相關護具</li>
+            <li>相關備註：如有疑問，請電洽～PHC 國際慈善舞團 趙文歆 0938-639357</li>
+          </ul>
+          </p>
+          <p>下載報名表：<a href="doc/join.docx">點此下載</a></p>
+        </div>
+        <div class="join_content_bottom">
+          <div class="title_MidPlus">線上報名
+            <hr class="hrStyle">
+          </div>
+          <div class="join_content_bottom_rg">
+            <div class="join_content_bottom_rg_left"> <img ng-src="view/images/join/title.jpg"> </div>
+            <div class="join_content_bottom_rg_right">
+              <form ng-submit = "joinComplete()" class="join_content_form">
+                <p class="join_name">姓名<span></span>
+                  <input id="name" type="text" class="join_query_Input Name" placeholder="" ng-model="name">
+                </p>
+                <p class="join_sex">性別<span></span>
+                  男<input type="checkbox" ng-model="male" ng-click="clickSex(0)">
+                  女<input type="checkbox" ng-model="female" ng-click="clickSex(1)">
+                </p>
+                <p class="join_birth">生日<span></span>
+                  <input id="borthYear" type="text" class="join_query_Input year" placeholder="年" ng-model="borthYear">
+                  <input id="borthMonth" type="text" class="join_query_Input month" placeholder="月" ng-model="borthMonth">
+                  <input id="borthDay" type="text" class="join_query_Input day" placeholder="日" ng-model="borthDay">
+                </p>
+                <p class="join_id">身份證字號<span></span>
+                  <input id="identify" type="text" class="join_query_Input Name" placeholder="" ng-model="identify">
+                </p>
+                <p class="join_phone">聯絡電話<span></span>
+                  <input id="phone" type="text" class="join_query_Input Name" placeholder="" ng-model="phone">
+                </p>
+                <p class="join_ad">通訊地址<span></span>
+                  <input id="address" type="text" class="join_query_Input Name" placeholder="" ng-model="address">
+                </p>
+                <p class="join_email">E-mail<span></span>
+                  <input id="email" type="text" class="join_query_Input Name" placeholder="" ng-model="email">
+                </p>
+                <p class="join_company">服務單位<span></span>
+                  <input id="company" type="text" class="join_query_Input Name" placeholder="" ng-model="company">
+                </p>
+                <p class="join_school">學經歷<span></span>
+                  <input id="school" type="text" class="join_query_Input school" placeholder="學校" ng-model="school">
+                  <input id="research" type="text" class="join_query_Input research" placeholder="科系/所" ng-model="research">
+                  <input id="danceYear" type="text" class="join_query_Input danceYear" placeholder="舞蹈年數" ng-model="danceYear">
+                  <input id="graudeYear" type="text" class="join_query_Input graudeYear" placeholder="畢業時間" ng-model="graudeYear">
+                </p>
+                <p class="join_history">演出經歷(500字以內)<span></span>
+                  <textarea maxlength="500" id="messagge" name="messagge" placeholder="留言" class="join_query_Input message" required ng-model="showhistory"></textarea>
+                </p>
+                <div class="join_update">
+                  <div class="join_update_left">
+                    <div class="container_Full personal join_update_left_pic">
+                      <a ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false" ng-model="pImage" ngf-max-size="2MB" ngf-change="testPImage(pImage)"></a>
+                      <div class="join_update_left_content" ng-class="pImageInfoShow"> 上傳個人大頭照<span>(檔案大小不可超過2MB, 只可上傳圖片檔案)</span>
+                         </div>
+                      <img ngf-src="pImage"/>
+                    </div>
+                  </div>
+                  <div class="join_update_right">
+                    <div class="container_Full join_update_right_pic">
+                      <a ngf-select="" ngf-pattern="'image/*'" ngf-multiple="true" ng-model="pLifePics" ngf-max-size="2MB" ngf-change="checkCount()"></a>
+                      <div class="join_update_right_content"> 上傳個人生活照<span>(單檔案大小不可超過2MB, 最多上傳5個檔案, 只可上傳圖片檔案) </span>
+                        </div>
+                      <div ng-repeat="pic in pLifePics" class="join_pImage pIndex{{$index}}"> <img ngf-src="pic"/> </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <p class="clearfix">
+                  <button class="join_query_Input submit" type="submit">甄選報名</button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

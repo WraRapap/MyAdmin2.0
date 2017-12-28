@@ -1,0 +1,28 @@
+<?php
+// 初始化常量
+defined('FRAME_PATH') or define('FRAME_PATH', __DIR__.'/');
+defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
+defined('APP_DEBUG') or define('APP_DEBUG', false);
+defined('CONFIG_PATH') or define('CONFIG_PATH', APP_PATH.'config/');
+defined('RUNTIME_PATH') or define('RUNTIME_PATH', APP_PATH.'runtime/');
+
+// 包含配置文件
+require_once APP_PATH . 'config/config.php';
+require_once APP_PATH . 'config/serviceType.php';
+require_once APP_PATH . 'config/actionType.php';
+
+//包含核心框架类
+require FRAME_PATH . 'Core.php';
+
+// 实例化核心类
+$fast = new Core;
+if(!isset($_FILES['file']))
+{
+    $fast->run();
+    $fast->route();
+}
+else
+{
+    $fast->run();
+    $fast->upload();
+}

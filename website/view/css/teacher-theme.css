@@ -1,0 +1,199 @@
+.teacher_container {
+	width: 100%;
+}
+.teacher_mainBg {
+	width: 100%;
+	height: 120px;
+	background-color: #ebebeb;
+}
+.teacher_mainPic {
+	width: 100%;
+	height: 280px;
+	display: table;
+	text-align: center;
+	background: url(../images/teacher/PHC-teacher_banner.jpg) center no-repeat;
+}
+.teacher_mainPic > div {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fff;
+}
+.teacher_mainPic .hrStyle {
+	margin: 34px auto;
+	background: #fff;
+}
+.teacher_content {
+	padding: 50px 0;
+}
+.teacher_content_wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+.teacher_LeftMenuBar, .teacher_RightMenuBar {
+	display: inline-block;
+}
+.teacher_LeftMenuBar {
+	width: 15%;
+	float: left;
+	padding: 0 40px 0 0;
+	box-sizing: border-box;
+}
+.teacher_RightMenuBar {
+	width: 85%;
+	float: right;
+	border-left: 2px solid rgba(149,149,149,1);
+	box-sizing: border-box;
+	padding: 0 0 0 85px;
+}
+.teacher_linkText {
+	cursor: pointer;
+	font-size: 28px;
+	margin: 0 0 30px 0;
+}
+.teacherIntro {
+	text-align: right;
+}
+.teacherIntroduce.over {
+	cursor : pointer;
+	color: rgb(221,169,105);
+}
+.teacher_container .title_Large {
+	padding: 0 0 36px;
+}
+.teacher_container .txt_Large {
+	padding: 0 0 26px;
+	font-weight: 700;
+}
+.teacher_data_wrapper.area1 {
+	width: 100%;
+	padding: 0 0 30px;
+}
+.teacher_data_pic, .teacher_data_info {
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+}
+.teacher_data_pic {
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+}
+.teacher_data_pic > img {
+	width: 100%;
+}
+.teacher_data_info {
+	width: 50%;
+	padding: 20px 0 0 50px;
+	box-sizing: border-box;
+}
+.teacher_data_wrapper.area2 {
+	padding: 0 0 80px;
+	clear: both;
+}
+.teacher_data_wrapper.area2 > div {
+	display: table-cell;
+	width: 50%;
+}
+.teacher_data_wrapper.area2 > div:first-child {
+	padding: 0 20px 0 0;
+}
+.teacher_data_wrapper.area2 > div:nth-child(2) {
+	padding: 0 0 0 20px;
+}
+.teacher_data_wrapper.area2 > div > div {
+	padding: 50px 0 0;
+}
+.teacher_data_wrapper.area3 a {
+	display: inline-block;
+	width: 25%;
+	height: 180px;
+	height: 120px\9;
+	padding: 0 20px 0;
+	margin: 0 0 20px 0;
+	box-sizing: border-box;
+}
+.teacher_data_wrapper.area3 img {
+	width: 100%;
+	height: 100%;
+	height: auto\9;
+	max-width: 198px\9;
+	object-fit: scale-down;
+}
+
+@media screen and (max-width: 1024px) {
+.teacher_content_wrap {
+	width: 90%;
+}
+.teacher_data_wrapper.area3 a {
+	width: 33%;
+}
+}
+
+@media screen and (max-width: 768px) {
+.teacher_mainBg{
+display:none;
+}
+.teacher_LeftMenuBar, .teacher_RightMenuBar {
+	display: block;
+	float: none;
+	width: 100%;
+}
+.teacher_LeftMenuBar {
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 0 20px;
+	border-bottom: 2px solid #ebebeb;
+}
+.teacher_RightMenuBar {
+	border: none;
+	padding: 40px 0 0;
+}
+.teacherIntro {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+}
+.teacher_linkText {
+	margin: 0 0 20px 0;
+}
+.teacher_data_pic, .teacher_data_info {
+	display: block;
+	width: 100%;
+}
+.teacher_data_pic > img {
+	display: inline-block;
+	width: 250px;
+	height: auto;
+	margin: 0 auto;
+}
+.teacher_data_info {
+	padding: 20px 0 0;
+}
+.teacher_data_wrapper.area1 {
+	padding: 0;
+}
+.teacher_data_wrapper.area2 > div {
+	display: block;
+	width: 100%;
+}
+.teacher_data_wrapper.area2 > div:first-child {
+	padding: 0;
+}
+.teacher_data_wrapper.area2 > div:nth-child(2) {
+	padding: 0;
+}
+}
+
+@media screen and (max-width: 414px) {
+.teacherIntro {
+	width: 50%;
+}
+.teacher_linkText {
+	font-size: 22px;
+}
+.teacher_data_wrapper.area3 a {
+	width: 50%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+}

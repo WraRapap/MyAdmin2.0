@@ -1,0 +1,59 @@
+.join-lesson_container {
+	width: 100%;
+}
+.join-lesson_mainBg {
+	width: 100%;
+	height: 120px;
+	background-color: #ebebeb;
+}
+.join-lesson_mainPic {
+	width: 100%;
+	height: 280px;
+	display: table;
+	text-align: center;
+	background: url(../images/about/PHC-about_banner.jpg) center no-repeat;
+}
+.join-lesson_mainPic > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.join-lesson_mainPic .hrStyle {
+	margin: 34px auto;
+}
+.join-lesson_content {
+	padding: 50px 0;
+}
+.join-lesson_content_wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+.join-lesson_form input, .join-lesson_form select, .join-lesson_form textarea, .join-lesson_form button {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	font-size: 18px;
+	color: #898989;
+	background: #FDFDFD;
+	border: 1px solid #898989;
+	border-radius: 4px;
+	margin: 0 0 26px 0;
+	box-sizing: border-box;
+}
+.join-lesson_form select {
+	padding: 10px 0 10px 12px;
+}
+.join-lesson_form textarea {
+	height: 80px;
+}
+.join-lesson_form button {
+	color: #000;
+	background: #898989;
+	border: 1px solid #898989;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+.join-lesson_mainBg {
+	display: none;
+}
+}

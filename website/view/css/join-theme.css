@@ -1,0 +1,202 @@
+.join_container {
+	width: 100%;
+}
+.join_mainBg {
+	width: 100%;
+	height: 120px;
+	background-color: #ebebeb;
+}
+.join_mainPic {
+	width: 100%;
+	height: 280px;
+	display: table;
+	text-align: center;
+	background: url(../images/about/PHC-about_banner.jpg) center no-repeat;
+}
+.join_mainPic > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.join_mainPic .hrStyle {
+	margin: 34px auto;
+}
+.join_content {
+	padding: 50px 0;
+}
+.join_content_wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+.join_content_up {
+	padding: 0 7% 50px;
+	box-sizing: border-box;
+}
+.join_content_up > p, .join_content_up .addSpace {
+	margin: 0 0 26px 0;
+}
+.join_content_up > p > a {
+	text-decoration: none;
+	color: #0000ff;
+}
+.join_content_up ul {
+	list-style: none;
+}
+.join_content_up ul > li:before {
+	content: "*";
+	display: inline-block;
+	width: 1em;
+}
+.join_content_up ol {
+	margin: 0 0 0 30px;
+	padding: 0;
+}
+.join_content_bottom .hrStyle {
+	width: 64px;
+}
+.join_content_bottom_rg_left, .join_content_bottom_rg_right {
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+.join_content_bottom_rg_left{
+	padding: 0 4.5% 0 0;
+	box-sizing: border-box;
+}
+.join_content_bottom_rg_left > img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+.join_content_form{
+	font-size: 20px;
+}
+.join_content_form > p{
+	width: 100%;
+	border: 2px solid #a6a6a6;
+	border-radius: 2px;
+	padding: 8px 12px;
+	box-sizing: border-box;
+	margin: 0 0 20px 0;
+	clear: both;
+}
+.join_content_form > p:last-child{
+	border: none;
+	padding: 0;
+}
+.join_content_form input,
+.join_content_form textarea{
+    border:  none;
+}
+.join_name input{
+	width: calc(100% - 52px);
+}
+.join_sex span{
+        margin: 0 20px 0 0;
+}
+.join_sex input{
+	margin: 0 0 0 10px;
+ }
+.join_birth input{
+	width: calc(33% - 26px);
+        text-align: right;
+}
+.join_id input{
+	width: calc(100% - 130px);
+}
+.join_phone input,.join_ad input,.join_email input,.join_company input{
+	width: calc(100% - 104px);
+}
+.join_school input{
+	width: calc(25% - 26px);
+        text-align: right;
+}
+.join_history textarea{
+ width: 100%;
+margin: 10px 0 0;
+}
+.join_content_form button{
+	border: 2px solid #a6a6a6;
+	border-radius: 2px;
+	padding: 8px 12px;
+	background: #fff;
+}
+.join_update{
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+.join_update_left,
+.join_update_right{
+	display: inline-block;
+	float: left;	
+}
+.join_update_left{
+	width: 40%;        
+}
+
+.join_update_right{
+	width: 60%;
+        padding: 0 0 0 20px;
+	box-sizing: border-box;	
+}
+.join_update_left_pic,
+.join_update_right_pic{
+	position: relative!important;
+}
+.join_update_left .container_Full > a,
+.join_update_right .container_Full > a{
+	position: absolute;
+	width: 100%;
+	height: 140px;
+	top:0;
+	left: 0;
+	z-index: 1;
+}
+.join_update_left_content,
+.join_update_right_content{
+	width: 100%;
+	padding: 10px;
+	border: 2px dashed #636363;
+	box-sizing: border-box;
+	z-index: 0;
+	text-align: center;
+	
+}
+.join_update_left_content > span,
+.join_update_right_content > span{
+       display: inline-block;
+font-size:14px;
+}
+/*.join_pImage > img {
+	width : 100%;
+	height: 100%;
+	object-fit: scale-down;
+	z-index: 501;
+}*/
+@media screen and (max-width: 1024px){
+.join_content_up {
+	padding: 0 0 50px;
+}
+.join_content_bottom_rg_left, .join_content_bottom_rg_right {
+	display: block;
+	float: none;
+	width: 100%;
+}
+.join_content_bottom_rg_left{
+	padding: 0;
+}
+.join_content_bottom_rg_right{
+	margin:40px 0 0;
+}
+}
+@media screen and (max-width: 768px){
+.join_mainBg{
+display:none;
+}
+}
+@media screen and (max-width: 414px){
+.join_school input{
+	width: 100%;
+text-align: left;
+}
+
+}
