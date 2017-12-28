@@ -72,5 +72,42 @@ class Api_Controller extends CS_Controller{
 
         echo json_encode(array("result" => "yes"));
     }
+
+    public  function signup(){
+        $course = $this -> tool_database -> emptyRecord("coursesignup");
+
+        $course -> id = uniqid();
+        $course -> name = $this -> tool_io -> post("name");
+        $course -> telphone = $this -> tool_io -> post("phone");
+        $course -> email = $this -> tool_io -> post("email");
+        $course -> course = $this -> tool_io -> post("lesson");
+        $course -> message = $this -> tool_io -> post("message");
+        $course -> insert();
+
+       echo json_encode( array("Ret" => 0));
+    }
+
+    public  function showactivity(){
+        $activitys = $this -> tool_database -> findAll("activity",array("id","cover","title"));
+        $array = array();
+        foreach ($activitys as  $item) {
+            $array[]=array("id"=>$item->id,"cover"=>$item->cover,"title"=>$item->title);
+        }
+        echo json_encode($array);
+    }
+
+    public  function showpics(){
+        $activity = $this -> tool_database -> find(
+            "activity",
+            array("id","cover","title","imgs"),
+            array("id=?"),
+            array($_POST["id"])
+        );
+        $array=array();
+        if(count($activity)>0)
+          $array = array("id"=>$activity->id,"cover"=>$activity->cover,"title"=>$activity->title,"imgs"=>$activity->imgs);
+
+        echo json_encode($array);
+    }
 }
 ?>

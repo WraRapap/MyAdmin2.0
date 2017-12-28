@@ -35,11 +35,12 @@ class Website_Controller extends WebsiteController{
     public function joinlesson()
     {
         $courselist=$this -> tool_database -> findAll(
-            "cs_course",
+            "course",
             array("id","title")
         );
-        $datas=array("course"=>$courselist );
-        $this ->display("joinlesson");
+
+        $datas=array("courselist"=>$courselist);
+        $this ->display("joinlesson",$datas);
     }
 
 
@@ -71,6 +72,12 @@ class Website_Controller extends WebsiteController{
 			echo $this -> tool_jspacker -> encode($content);
 		}
 
+        $sdkPath = $this -> config_env -> basePath . $this -> config_env -> jsLibPath . "/angularjs/sdk.js";
+        if(file_exists($sdkPath)){
+            $content = file_get_contents($sdkPath);
+
+            echo $this -> tool_jspacker -> encode($content);
+        }
 //        $jsEmptyPath = $this -> config_env -> basePath . $this -> config_env -> jsLibPath . "/angularjs/empty.js";
 //        $content = file_get_contents($jsEmptyPath);
 //        echo $this -> tool_jspacker -> encode($content);
@@ -94,13 +101,7 @@ class Website_Controller extends WebsiteController{
             echo $this -> tool_jspacker -> encode($content);
         }
 
-        $sdkPath = $this -> config_env -> basePath . $this -> config_env -> jsLibPath . "/angularjs/sdk.js";
 
-        if(file_exists($sdkPath)){
-            $content = file_get_contents($sdkPath);
-
-            echo $this -> tool_jspacker -> encode($content);
-        }
 	}
 
 	private function checkLogin(){

@@ -19,7 +19,7 @@
 					dataType 	: 'json',
 					success		: feedback,
 					error		: function(result){
-						//your code here
+                        alert("系統繁忙，稍後再試1");
 					}
 				});
 			}
@@ -36,7 +36,7 @@
 
 					},
 					error		: function(result){
-						//your code here
+						alert("系統繁忙，稍後再試");
 					}
 				});
 

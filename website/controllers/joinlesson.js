@@ -4,9 +4,9 @@
 		.module('PH')
 		.controller('JoinLessonController', JoinLessonController);
 
-	JoinLessonController.$inject = ['$scope','UserData', '$window', '$interval', 'HttpService'];
+	JoinLessonController.$inject = ['$scope','UserData', '$window', '$interval', 'sdk'];
 
-	function JoinLessonController( $scope, UserData, $window, $interval, HttpService)
+	function JoinLessonController( $scope, UserData, $window, $interval, sdk)
 	{
 		var self = this;
 
@@ -50,22 +50,24 @@
 				lesson : $scope.lesson,
 				message : $scope.message
 			};
-			HttpService.HttpPost(SOCKET_DEF.URL , SERVICE_TYPE.JOIN , ACTION_TYPE.JOIN_NORMAL, DataObj)
-			.then(function(result) 
-	        {
-	        	if(result.Ret == ResultMsg.LoginReply.Success)
-	        	{
-	        		alert("報名成功");
-	        		self.initJoinForm();
-	        	}
-	        	else if(result.Ret == -1)
-	        	{
-	        		alert("報名失敗");
-	        		self.initJoinForm();
-	        	}
-	        });
+            var result = sdk.executeApi("signup", DataObj);
+            signupresult(result);
 		};
-		
+
+        signupresult = function(result)
+        {
+            if(result.Ret == ResultMsg.LoginReply.Success)
+            {
+                alert("報名成功");
+                self.initJoinForm();
+            }
+            else if(result.Ret == -1)
+            {
+                alert("報名失敗");
+                self.initJoinForm();
+            }
+        };
+
 		self.initJoinForm();
 
 		angular.element(document).ready(function () {
