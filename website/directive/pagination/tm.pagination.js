@@ -2,11 +2,10 @@
  * name: tm.pagination
  * Version: 1.0.0 beta
  */
-angular.module('tm.pagination', []).directive('tmPagination',[function(){
+angular.module('tm.pagination',[]).directive('tmPagination',[function(){
     return {
         restrict: 'EA',
         templateUrl: 'directive/pagination/tm.pagination.htm',
-        replace: true,
         scope: {
             conf: '='
         },

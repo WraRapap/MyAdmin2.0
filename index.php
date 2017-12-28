@@ -96,6 +96,10 @@ class EntryPoint{
 		$websiteorignPath = Chihsin::$configs["env"]["basePath"] . Chihsin::$configs["env"]["websitePath"];
 		$websitePath = $websiteorignPath . $mvc_path;
 
+		if(stripos($mvc_path,"pagination")>0){
+		    return;
+        }
+
 		if(file_exists($websitePath) || file_exists($websiteorignPath."/view/". $mvc_path)){
 
 			$scriptName = basename($websitePath);

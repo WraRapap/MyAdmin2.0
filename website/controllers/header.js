@@ -58,14 +58,14 @@
 		};
 
 		$scope.ClickLesson = function(id) {
-            location.href="lesson.htm/"+id;
+            location.href="lesson.htm?typeID="+id;
             // $state.go('lesson', {'typeID' : id});
 			self.closeMMenu();
 		};
 
 		$scope.ClickTeacher = function() {
 			// $state.go('teacher', {'tNumber' : 'origin'});
-            location.href="teacher.htm/origin";
+            location.href="teacher.htm?origin";
 			self.closeMMenu();
 		};
 

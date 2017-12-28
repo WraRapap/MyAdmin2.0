@@ -103,7 +103,7 @@ class Database_Tool extends CS_Tool{
 		$instance -> embedCommand($sql);
 		$instance -> execute();
 
-		// $data["id"] = mysql_insert_id();
+		//$data["id"] = mysql_insert_id();
 		
 		return $data["id"];
 	}
