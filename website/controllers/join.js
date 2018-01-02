@@ -104,6 +104,8 @@
 			else if($scope.identify == "")
 			{
 				alert("請填寫身份證字號");
+
+
 				flag = false;
 			}
 			else if($scope.phone == "")

@@ -163,10 +163,9 @@
 	        $scope.albumDatas = [];
 			//跟Server要舞團相本跟活動相本的資料
 			var DataObj = {
-				id:0,
+				id:0
 			};
 			var result = sdk.executeApi("showactivity", DataObj);
-			console.log(result.length);
             if(result.length>0)
 			{
 				var albumList = result;
@@ -174,7 +173,7 @@
                 for(var i = 0; i < albumList.length; i++)
 				{
 
-					var cover =(JSON.parse(albumList[i].cover))[0].path;
+					var cover =(JSON.parse(albumList[i].imgs))[0].path;
                     albumList[i].cover_name = "../system/files/" + cover;
                     albumList[i].name =albumList[i].title ;
 					$scope.albumDatas.push(albumList[i]);

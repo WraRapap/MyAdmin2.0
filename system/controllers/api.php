@@ -88,10 +88,13 @@ class Api_Controller extends CS_Controller{
     }
 
     public  function showactivity(){
-        $activitys = $this -> tool_database -> findAll("activity",array("id","cover","title"));
+        $activitys = $this -> tool_database -> findAll(
+                                                "activity",
+                                                array("id","imgs","title"),
+                                                array("publish='Y'"));
         $array = array();
         foreach ($activitys as  $item) {
-            $array[]=array("id"=>$item->id,"cover"=>$item->cover,"title"=>$item->title);
+            $array[]=array("id"=>$item->id,"imgs"=>$item->imgs,"title"=>$item->title);
         }
         echo json_encode($array);
     }
@@ -99,13 +102,13 @@ class Api_Controller extends CS_Controller{
     public  function showpics(){
         $activity = $this -> tool_database -> find(
             "activity",
-            array("id","cover","title","imgs"),
+            array("id","title","imgs"),
             array("id=?"),
-            array($_POST["id"])
+            array($this -> tool_io -> post("id"))
         );
         $array=array();
         if(count($activity)>0)
-          $array = array("id"=>$activity->id,"cover"=>$activity->cover,"title"=>$activity->title,"imgs"=>$activity->imgs);
+          $array = array("id"=>$activity->id,"title"=>$activity->title,"imgs"=>$activity->imgs);
 
         echo json_encode($array);
     }
