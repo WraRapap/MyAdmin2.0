@@ -100,16 +100,22 @@
 }
 .lesson_class > div > div {
 	display: table-cell;
-	width: 12.5%;	
+	width: 12.5%;
 	min-width: 120px;
 	padding: 20px 10px;
 	border: 5px solid #fff;
 	box-sizing: border-box;
 }
-.lesson_class > div:nth-child(4) > div:first-child {
+.lesson_class > div:nth-child(3) > div:first-child {
 	border-bottom: none;
 }
+.lesson_class > div:nth-child(4) > div:first-child {
+	border-top: aliceblue;
+}
 .lesson_class > div:nth-child(5) > div:first-child {
+	border-bottom: none;
+}
+.lesson_class > div:nth-child(6) > div:first-child {
 	border-top: none;
 }
 .lesson_class a {
@@ -147,71 +153,71 @@
 }
 
 @media screen and (max-width: 1024px) {
-.lesson_content_wrap {
-	width: 90%;
-}
-.lesson_type {
-	display: block;
-	width: 100%;
-	min-height: 200px;
-	float: none;
-	margin: 0 0 40px 0;
-}
-.lesson_type:nth-child(odd) {
-	padding: 0;
-}
-.lesson_type:nth-child(even) {
-	padding: 0;
-}
-.lesson_LeftMenuBar {
-	padding: 0 20px 0 0;
-}
-.lesson_RightMenuBar {
-	padding: 0 0 0 40px;
-}
-.lesson_class > div > div {
-	padding: 10px 10px;
-}
+	.lesson_content_wrap {
+		width: 90%;
+	}
+	.lesson_type {
+		display: block;
+		width: 100%;
+		min-height: 200px;
+		float: none;
+		margin: 0 0 40px 0;
+	}
+	.lesson_type:nth-child(odd) {
+		padding: 0;
+	}
+	.lesson_type:nth-child(even) {
+		padding: 0;
+	}
+	.lesson_LeftMenuBar {
+		padding: 0 20px 0 0;
+	}
+	.lesson_RightMenuBar {
+		padding: 0 0 0 40px;
+	}
+	.lesson_class > div > div {
+		padding: 10px 10px;
+	}
 }
 
 @media screen and (max-width: 768px) {
-.lesson_mainBg{
-display:none;
-}
-.lesson_LeftMenuBar, .lesson_RightMenuBar {
-	display: block;
-	width: 100%;
-	float: none;
-}
-.lesson_LeftMenuBar {
-	width: 100%!important;
-	display: table;
-	padding: 0 0 20px 0;
-	border-bottom: 2px solid #ebebeb;
-}
-.lesson_RightMenuBar {
-	border-left: none;
-	padding: 40px 0 0;
-	clear: both;
-}
-.lessonIntroduce {
-	display: table-cell;
-	width: 50%;
-}
-.lesson_linkText {
-	text-align: center;
-	margin: 0;
-}
+	.lesson_mainBg{
+		display:none;
+	}
+	.lesson_LeftMenuBar, .lesson_RightMenuBar {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	.lesson_LeftMenuBar {
+		width: 100%!important;
+		display: table;
+		padding: 0 0 20px 0;
+		border-bottom: 2px solid #ebebeb;
+	}
+	.lesson_RightMenuBar {
+		border-left: none;
+		padding: 40px 0 0;
+		clear: both;
+	}
+	.lessonIntroduce {
+		display: table-cell;
+		width: 50%;
+	}
+	.lesson_linkText {
+		text-align: center;
+		margin: 0;
+	}
 }
 
 @media screen and (max-width: 414px) {
-.lesson_class {
-	margin: 0 0 20px;
-}
-.lesson_class > div {
-	font-size: 16px;
-}
-.lesson_class > div > div {
-	border: 2px solid #fff;
-}
+	.lesson_class {
+		margin: 0 0 20px;
+	}
+	.lesson_class > div {
+		font-size: 16px;
+	}
+	.lesson_class > div > div {
+		border: 2px solid #fff;
+	}
 }
