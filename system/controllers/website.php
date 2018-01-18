@@ -91,8 +91,18 @@ class Website_Controller extends WebsiteController{
 
 		$jsPath = $this -> config_env -> basePath . $this -> config_env -> websitePath . "/controllers/" . $viewName . ".js";
 		if(file_exists($jsPath)){
-			$content = file_get_contents($jsPath);
-			echo $this -> tool_jspacker -> encode($content);
+
+            @session_start();
+            $lang = isset($_SESSION["LANG"])?$_SESSION["LANG"]:"zh";
+            @session_write_close();
+
+            $content = file_get_contents($jsPath);
+            if($lang == "cn"){
+                echo $this -> tool_jspacker -> encode($this -> tool_translate -> covertTW2CN($content));
+            }
+            if($lang == "zh"){
+                echo $this -> tool_jspacker -> encode($this -> tool_translate -> covertCN2TW($content));
+            }
 		}
 
         $jsPath = $this -> config_env -> basePath . $this -> config_env -> websitePath . "/controllers/footer.js";

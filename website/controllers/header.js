@@ -6,10 +6,13 @@
 	{
 		var self = this;
 
-
-
-		$scope.TwFont="fadeIn";
-		$scope.ChFont="";
+		if($("#lanType").val()=='zh'){
+            $scope.TwFont="fadeIn";
+            $scope.ChFont="";
+		}else{
+            $scope.ChFont="fadeIn";
+            $scope.TwFont="";
+		}
 
 		$scope.lessonMenuShow = "";
 		$scope.activityMenuShow = "";
@@ -22,6 +25,25 @@
 
 		$scope.LanguageChange = function (lanType)
 		{
+			var lanTypeStr="lanType="+lanType;
+			if(location.href.indexOf("?")>-1){
+				if(GetQueryString("lanType")!=null){
+                    var index = location.href.indexOf(lanTypeStr);
+					if(index==-1){
+						index= location.href.indexOf("lanType=");
+						location.href = location.href.substr(0,index+8)+(lanType==0?"0":"2");
+					}else{
+                        location.href=location.href;
+					}
+				}else{
+                    location.href=location.href+"&"+lanTypeStr;
+				}
+
+			}
+			else{
+                location.href=location.href+"?"+lanTypeStr;
+            }
+
 			LanMgr.SetLan(lanType);
 			if(lanType == 0)
 			{
@@ -33,6 +55,7 @@
 				$scope.TwFont="";
 				$scope.ChFont="fadeIn";
 			}
+
 		};
 
 		self.onAccountChange = function ()

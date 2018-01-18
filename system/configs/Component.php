@@ -63,7 +63,13 @@
 					array("title" => "開始頁籤"		, "variable" => "tabstart"),
 					array("title" => "結束頁籤"		, "variable" => "tabend"),
 				)
-			)
+			),
+            array(
+                "title" => "自訂元件",
+                "components" => array(
+                    array("title" => "購物車清單"		, "variable" => "cart")
+                )
+            )
 		);
 
 		?>

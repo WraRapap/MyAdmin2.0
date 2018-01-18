@@ -87,7 +87,6 @@ class EntryPoint{
 			exit("URI ERROR");
 		}
 
-
 		// 取得 index 之後的 MVC路徑
 		$mvc_path = isset($_SERVER['PATH_INFO'])?$_SERVER['PATH_INFO']:"/";
 
@@ -101,6 +100,20 @@ class EntryPoint{
         }
 
 		if(file_exists($websitePath) || file_exists($websiteorignPath."/view/". $mvc_path)){
+
+
+		    if( isset($_GET["lanType"])){
+                $lanType =$_GET["lanType"];
+                if($lanType=="2"){
+                    $lanType="cn";
+                }
+                else{
+                    $lanType="zh";
+                }
+                @session_start();
+                $_SESSION["LANG"]=$lanType;
+                session_write_close();
+            }
 
 			$scriptName = basename($websitePath);
 

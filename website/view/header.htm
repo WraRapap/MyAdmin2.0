@@ -49,6 +49,7 @@
           <div><a href="https://www.facebook.com/PHCDanceStudio/" target="_blank"><img ng-src="view/images/index/fb.png" class="header_Icon"></a></div>
         </div>
         <div class = "header_languageBar">
+          <input type="hidden" id="lanType" value="<?php echo isset($_SESSION['LANG'])?$_SESSION['LANG']:'zh';?>" />
           <div class = "header_TranditionCh"> <a href="javascript:void(0);" ng-click="LanguageChange(0)"><span class="header_text" ng-class="TwFont">繁<span>體中文</span></span></a> </div>
           <div class = "header_Line">|</div>
           <div class = "header_SimpleCh"> <a href="javascript:void(0);" ng-click="LanguageChange(2)"><span class="header_text" ng-class="ChFont">简<span>体中文</span></span></a> </div>
@@ -69,7 +70,7 @@
                   <li><a href="lesson.htm?typeID=2">舞團課表</a></li>
                 </ul>
               </li>
-              <li><a href="teacher.htm?origin" ng-click=""> 師資介紹 </a></li>
+              <li><a href="teacher.htm?origin=0" ng-click=""> 師資介紹 </a></li>
               <li><a href="index.htm" class="nav_Logo"><img ng-src="view/images/index/dance.png"></a></li>
               <li><a href="activity.htm" ng-click=""> 活動相本 </a></li>
               <li ng-mouseleave="joinListLeave()"><a href="javascript:void(0);" ng-click="joinListEnter()" ng-mouseenter="joinListEnter()"> 預約報名 </a>

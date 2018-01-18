@@ -74,15 +74,16 @@ class Api_Controller extends CS_Controller{
     }
 
     public  function signup(){
-        $course = $this -> tool_database -> emptyRecord("coursesignup");
+        $coursesignup = $this -> tool_database -> emptyRecord("coursesignup");
 
-        $course -> id = uniqid();
-        $course -> name = $this -> tool_io -> post("name");
-        $course -> telphone = $this -> tool_io -> post("phone");
-        $course -> email = $this -> tool_io -> post("email");
-        $course -> course = $this -> tool_io -> post("lesson");
-        $course -> message = $this -> tool_io -> post("message");
-        $course -> insert();
+        $coursesignup -> id = uniqid();
+        $coursesignup -> name = $this -> tool_io -> post("name");
+        $coursesignup -> telphone = $this -> tool_io -> post("phone");
+        $coursesignup -> email = $this -> tool_io -> post("email");
+        $coursesignup -> course = $this -> tool_io -> post("lesson");
+        $coursesignup -> message = $this -> tool_io -> post("message");
+        $coursesignup -> createTime = date("Y-m-d H:i:s",time());
+        $coursesignup -> insert();
 
        echo json_encode( array("Ret" => 0));
     }
