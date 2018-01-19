@@ -5,12 +5,11 @@
 angular.module('tm.pagination',[]).directive('tmPagination',[function(){
     return {
         restrict: 'EA',
-        templateUrl: 'directive/pagination/tm.pagination.htm',
+        templateUrl:'/website/directive/pagination/tm.pagination.htm',
         scope: {
             conf: '='
         },
         link: function(scope, element, attrs) {
-            
             var conf = scope.conf;
 
             // 默认分页长度
@@ -57,7 +56,6 @@ angular.module('tm.pagination',[]).directive('tmPagination',[function(){
                 if(!conf.currentPage) {
                     conf.currentPage = 1;
                 }
-
                 // conf.totalItems
                 if(conf.totalItems) {
                     conf.totalItems = parseInt(conf.totalItems, 10);
@@ -242,7 +240,6 @@ angular.module('tm.pagination',[]).directive('tmPagination',[function(){
                 }
                 getPagination();
             })
-            
         }
     };
 }]);
