@@ -92,7 +92,9 @@ class Api_Controller extends CS_Controller{
         $activitys = $this -> tool_database -> findAll(
                                                 "activity",
                                                 array("id","imgs","title"),
-                                                array("publish='Y'"));
+                                                array("publish='Y'"),
+                                                array(),
+                                                array("createTime desc"));
         $array = array();
         foreach ($activitys as  $item) {
             $array[]=array("id"=>$item->id,"imgs"=>$item->imgs,"title"=>$item->title);
