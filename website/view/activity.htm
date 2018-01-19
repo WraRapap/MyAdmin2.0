@@ -15,13 +15,13 @@
       <div class= "activity_SliderPic_Pic"> <img ng-src="{{choicePic}}"> </div>
     </div>
     <div class="activity_content">
-      <div class="activity_content_wrap">
+      <div class="activity_content_wrap clearfix">
         <div class="container_Full">
           <div class="activity_RightMenuBar">
             <div class="activity_album" ng-show="showAlbum=='0'">
               <div class="activity_album_content act{{$index}}" ng-repeat="data in albumShowDatas">
                 <p class="activity_album_title">{{data.name}}</p>
-                <p><img ng-src="{{data.cover_name}}" class="activity_album_pic"></p>
+                <p class="S-pic-content"><img ng-src="{{data.cover_name}}" class="activity_album_pic"></p>
                 <p class="activity_album_link" ng-click="clickAlbum($index)"><img src="view/images/index/Row2-arrow.png">進入相本</p>
               </div>
             </div>
@@ -30,7 +30,9 @@
                 <div class="activity_pic_title" ng-click="backToAlbum()">活動相本 > </div>
                 <div class="activity_pic_title1">{{choiceAlbumName}}</div>
               </div>
-              <div class="activity_pic_content number{{$index}}" ng-repeat="data in albumShowPics" ng-click="clickShowSlider($index)"> <img ng-src="{{data.name}}" class="activity_pic_pic"> </div>
+              <div class="activity_pic_content number{{$index}}" ng-repeat="data in albumShowPics" ng-click="clickShowSlider($index)">
+                <img ng-src="{{data.name}}" class="activity_pic_pic">
+              </div>
             </div>
             <div class="activity_page">
               <tm-pagination conf="paginationConf"></tm-pagination>

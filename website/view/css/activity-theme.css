@@ -58,10 +58,23 @@
 }
 .activity_album {
 	z-index: 5;
+	/*20180119Alex*/
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+
 }
 .activity_album_content {
-	display: inline-block;
+	/*display: inline-block;*/
 	width: 33%;
+	/*20180119Alex*/
+	/*width: 50%;*/
+	height: 315px;
+	/*background-color: orange;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 .activity_album_content > p {
 	text-align: center;
@@ -73,7 +86,18 @@
 .activity_album_pic {
 	width: 100%;
 	max-width: 350px;
-	height: auto;
+	/*20180119Alex*/
+	/*height: auto;*/
+
+}
+.S-pic-content{/*20180119Alex*/
+	/*height: 240px;*/
+	/*background-color: orange;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+
 }
 .activity_album_link {
 	cursor: pointer;
@@ -88,6 +112,8 @@
 }
 .activity_pic {
 	z-index: 5;
+	/*Alex20180119*/
+	/*background-color: orange;*/
 }
 .activity_pic_title {
 	cursor: pointer;
