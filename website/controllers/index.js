@@ -7,12 +7,12 @@
 		.animation(".index_Row1_Img", Row1Img_Animatior)
 		.directive("scroll", ScrollFunc);
 
-	IndexController.$inject = ['$scope','UserData', '$window', '$interval', 'HttpService'];
+	IndexController.$inject = ['$scope','UserData', '$window', '$interval', 'HttpService','sdk'];
 	Activity_Animatior.$inject = ['$animate'];
 	Row1Img_Animatior.$inject = ['$animate'];
 	ScrollFunc.$inject = ['$window'];
 
-	function IndexController( $scope, UserData, $window, $interval, HttpService)
+	function IndexController( $scope, UserData, $window, $interval, HttpService,sdk)
 	{
 		var self = this;
 
@@ -130,28 +130,29 @@
 
 		$scope.normalJoin = function()
 		{
-			var DataObj = {
-				name : $scope.name,
-				phone : $scope.phone,
-				email : $scope.email,
-				lesson : $scope.lesson,
-				message : $scope.message
-			};
-			HttpService.HttpPost(SOCKET_DEF.URL , SERVICE_TYPE.JOIN , ACTION_TYPE.JOIN_NORMAL, DataObj)
-			.then(function(result) 
-	        {
-	        	if(result.Ret == ResultMsg.LoginReply.Success)
-	        	{
-	        		alert("報名成功");
-	        		self.initJoinForm();
-	        	}
-	        	else if(result.Ret == -1)
-	        	{
-	        		alert("報名失敗");
-	        		self.initJoinForm();
-	        	}
-	        });
+            var DataObj = {
+                name : $scope.name,
+                phone : $scope.phone,
+                email : $scope.email,
+                lesson : $scope.lesson,
+                message : $scope.message
+            };
+            var result = sdk.executeApi("signup", DataObj);
+            signupresult(result);
 		};
+        signupresult = function(result)
+        {
+            if(result.Ret == ResultMsg.LoginReply.Success)
+            {
+                alert("報名成功");
+                self.initJoinForm();
+            }
+            else if(result.Ret == -1)
+            {
+                alert("報名失敗");
+                self.initJoinForm();
+            }
+        };
 
 		$scope.Activity_MoveLeft = function() {
 			//$scope.direction = "MoveLeft";

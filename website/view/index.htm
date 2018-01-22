@@ -108,9 +108,14 @@
               <input id="lastname" name="name" placeholder="聯絡電話" type="text" class="index_Row4_Input Phone" required="" ng-model="phone">
               <input id="email" name="email" placeholder="Email" type="text" class="index_Row4_Input Email" required="" ng-model="email">
               <!-- selected value as key(str)-->
-              <select ng-model="lesson"
-                      ng-options="a.key as a.value for a in actions" class="index_Row4_Input Lesson">
+              <select ng-model="lesson">
                 <option value="">選擇課程</option>
+
+                <?php foreach($this -> courselist as  $course): ?>
+
+                <option value="<?php echo $course->id; ?>"><?php echo $course->title; ?></option>
+
+                <?php endforeach; ?>
               </select>
               <textarea id="messagge" name="messagge" placeholder="留言(200字以內)" class="index_Row4_Input Message" required ng-model="message"></textarea>
               <button class="index_Row4_Input Submit" type="submit">馬上報名</button>

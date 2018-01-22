@@ -7,7 +7,13 @@ class Website_Controller extends WebsiteController{
 
 	public function index()
     {
-        $this ->display("index");
+        $courselist=$this -> tool_database -> findAll(
+            "course",
+            array("id","title")
+        );
+
+        $datas=array("courselist"=>$courselist);
+        $this ->display("index",$datas);
     }
 
     public function about()
