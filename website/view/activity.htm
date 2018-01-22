@@ -30,8 +30,10 @@
                 <div class="activity_pic_title" ng-click="backToAlbum()">活動相本 > </div>
                 <div class="activity_pic_title1">{{choiceAlbumName}}</div>
               </div>
-              <div class="activity_pic_content number{{$index}}" ng-repeat="data in albumShowPics" ng-click="clickShowSlider($index)">
-                <img ng-src="{{data.name}}" class="activity_pic_pic">
+              <div class="activity_pic_wrap">
+                <div class="activity_pic_content number{{$index}}" ng-repeat="data in albumShowPics" ng-click="clickShowSlider($index)">
+                  <img ng-src="{{data.name}}" class="activity_pic_pic">
+                </div>
               </div>
             </div>
             <div class="activity_page clearfix">

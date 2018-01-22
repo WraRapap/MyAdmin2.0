@@ -128,15 +128,28 @@
 	display: inline-block;
 	font-size: 28px;
 }
+.activity_pic_wrap{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-wrap: wrap;
+
+}
 .activity_pic_content {
-	display: inline-block;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 	width: 25%;
 	overflow: hidden;
+
 }
 .activity_pic_content > img {
 	width: 100%;
 	padding: 10px 10px 10px 0;
 	box-sizing: border-box;/*max-width: 250px;*/
+
 }
 .activity_pic_pic {
 /*object-fit: contain;*/
