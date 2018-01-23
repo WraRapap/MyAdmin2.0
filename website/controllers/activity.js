@@ -84,6 +84,7 @@
 			else if($scope.showAlbum == '1')
 				self.totalItems = $scope.albumPics.length;
 
+
 			if(!$scope.paginationConf)
 			{
 				$scope.paginationConf = 
@@ -182,24 +183,24 @@
 			}
 
 	        // .then(function(result)
-	        // {
-	        // 	if(result.Ret == ResultMsg.LoginReply.Failed)
-	        // 	{
-	        // 		//DialogService.OpenMessage(DIALOG_MODE.ONEBTN, LanMgr.Get(CS_Login.LOGIN_FAIL), LanMgr.Get(CS_Login.RE_LOGIN_MSG), self.loginFailed);
-	        // 	}
-	        // 	else if(result.Ret == ResultMsg.LoginReply.Success)
-	        // 	{
-	        // 		var albumList = result.Data.MonthlyData;
-	        // 		console.log(albumList.length);
-				// 	for(var i = 0; i < albumList.length; i++)
-				// 	{
-				// 		albumList[i].cover_name = "../activityupload/" + albumList[i].cover_name;
-				// 		$scope.albumDatas.push(albumList[i]);
-				// 	}
-				// 	self.pageInit();
-	        // 	}
-	        // }
-			// );
+            // {
+            // 	if(result.Ret == ResultMsg.LoginReply.Failed)
+            // 	{
+            // 		//DialogService.OpenMessage(DIALOG_MODE.ONEBTN, LanMgr.Get(CS_Login.LOGIN_FAIL), LanMgr.Get(CS_Login.RE_LOGIN_MSG), self.loginFailed);
+            // 	}
+            // 	else if(result.Ret == ResultMsg.LoginReply.Success)
+            // 	{
+            // 		var albumList = result.Data.MonthlyData;
+            // 		console.log(albumList.length);
+            // 	for(var i = 0; i < albumList.length; i++)
+            // 	{
+            // 		albumList[i].cover_name = "../activityupload/" + albumList[i].cover_name;
+            // 		$scope.albumDatas.push(albumList[i]);
+            // 	}
+            // 	self.pageInit();
+            // 	}
+            // }
+            // );
 		};
 
 		//取得某相本內所有資料
