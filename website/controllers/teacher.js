@@ -10,13 +10,6 @@
 	{
 		var self = this;
 		$scope.albumTitle = "師資介紹";
-		var offsetY = 0;
-		// if(GetQueryString("origin")!=null)
-		// {
-		// 	offsetY = 500;
-		// }
-
-		$( 'html, body').animate({scrollTop: offsetY}, 0);
 
 		// $scope.selectIndex = 0;
         $scope.selectIndex =GetQueryString("origin")!=null? GetQueryString("origin"):0;

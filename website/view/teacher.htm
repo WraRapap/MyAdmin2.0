@@ -56,3 +56,13 @@
     </div>
   </div>
 </div>
+<script>
+  $(function () {
+      var offsetY = 0;
+      if(parseInt(GetQueryString("origin")))
+      {
+          offsetY = 500;
+      }
+      $( 'html, body').animate({scrollTop: offsetY}, 0);
+  })
+</script>
